@@ -22,7 +22,7 @@ describe 'Homepage' do
 
     visit root_path
 
-		find('a', id: "confirm_#{audit_log.id}").click
+		click_on("confirm_#{audit_log.id}")
 
     expect(audit_log.reload.status == 'confirmed')
 	end
