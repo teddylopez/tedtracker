@@ -25,11 +25,14 @@ describe 'navigate' do
     end
 
     it 'has a list of posts' do
-      post1 = FactoryGirl.create(:post)
-      post2 = FactoryGirl.create(:second_post)
+      post
+      second_post = FactoryGirl.create(:second_post)
+      second_post.update!(user_id: user.id)
 
       visit posts_path
-      expect(page).to have_content(/Description|content/)
+
+      expect(page).to have_text(post.description)
+      expect(page).to have_text(second_post.description)
     end
 
     it 'has a scope that is only visible to the user that submitted it' do
