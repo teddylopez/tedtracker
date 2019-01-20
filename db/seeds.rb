@@ -3,7 +3,9 @@
   password_confirmation: "password",
   first_name: "Shred",
   last_name: "Lopez",
-  phone: '2402717135')
+  phone: '2402717135',
+  ssn: 1234,
+  company: "Advisory Board")
 
 puts "1 employee created"
 
@@ -12,7 +14,9 @@ AdminUser.create(email: "tedmlopez@gmail.com",
   password_confirmation: "password",
   first_name: "Shred",
   last_name: "Lopez",
-  phone: '1234567890')
+  phone: '1234567890',
+  ssn: 1234,
+  company: "Advisory Board")
 
 puts "1 admin user created"
 
