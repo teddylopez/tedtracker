@@ -20,10 +20,10 @@ gem "gritter", "1.2.0"
 gem 'administrate', '~> 0.11.0'
 gem 'bourbon'
 gem 'pundit', '~> 1.1'
-gem 'puma', '~> 3.4'
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'rails_12factor', group: :production
+gem 'faker', '~> 1.6', '>= 1.6.6'
 
 group :development, :test do
   gem 'byebug'

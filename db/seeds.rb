@@ -1,33 +1,41 @@
-@employee = Employee.create(email: "test@test.com",
-  password: "password",
-  password_confirmation: "password",
-  first_name: "Shred",
-  last_name: "Lopez",
-  phone: '2402717135',
-  ssn: 1234,
-  company: "Advisory Board")
+require 'faker'
 
-puts "1 employee created"
+@employees = Array.new
+18.times do |employee|
+  @employees << FactoryGirl.create(:user)
+end
 
-AdminUser.create(email: "tedmlopez@gmail.com",
-  password: "password",
-  password_confirmation: "password",
-  first_name: "Shred",
-  last_name: "Lopez",
-  phone: '1234567890',
-  ssn: 1234,
-  company: "Advisory Board")
+puts "18 employees created"
 
-puts "1 admin user created"
+@test_user = 1.times do |test_user|
+  FactoryGirl.create(:user)
+end
 
-AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 6.days))
-AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 13.days))
-AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 20.days))
+puts "1 test user"
+
+3.times do |admin|
+  FactoryGirl.create(:admin_user)
+end
+
+puts "3 admins created"
+
+@ted = FactoryGirl.create(:ted)
+
+puts "1 Ted created"
+
+AuditLog.create!(user_id: @employees.sample.id, status: 0, start_date: (Date.today - 6.days))
+AuditLog.create!(user_id: @employees.sample.id, status: 0, start_date: (Date.today - 13.days))
+AuditLog.create!(user_id: @employees.sample.id, status: 0, start_date: (Date.today - 20.days))
 
 puts "3 audit logs created"
 
-100.times do |post|
-  Post.create!(date: Date.today, description: "#{post} description content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", user_id: @employee.id, daily_hours: 12.5)
+13.times do |post|
+  Post.create!(
+    date: Faker::Date.between(1.year.ago, Date.today),
+    description: Faker::Seinfeld.quote,
+    user_id: @employees.sample.id,
+    daily_hours: rand(0.0..100.0).round(2)
+  )
 end
 
-puts "100 posts created"
+puts "13 posts created"
