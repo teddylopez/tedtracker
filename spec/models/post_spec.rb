@@ -11,9 +11,9 @@ RSpec.describe Post, type: :model do
       expect(@post).to be_valid
     end
 
-    it "can't be created without a date, rationale, and daily_hours" do
+    it "can't be created without a date, description, and daily_hours" do
       @post.date = nil
-      @post.rationale = nil
+      @post.description = nil
       @post.daily_hours = nil
       expect(@post).to_not be_valid
     end
