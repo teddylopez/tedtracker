@@ -3,13 +3,13 @@ FactoryGirl.define do
     date Date.today
     rationale "Post 1"
     user
-    overtime_request 3.5
+    daily_hours 12.5
   end
 
   factory :second_post, class: "Post" do
     date Date.yesterday
     rationale "Post 2"
     user
-    overtime_request 0.5
+    daily_hours 8.0
   end
 end
