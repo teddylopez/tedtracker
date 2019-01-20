@@ -23,7 +23,6 @@ gem 'puma', '~> 3.4'
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'rails_12factor', group: :production
-gem 'newrelic_rpm' 
 
 group :development, :test do
   gem 'byebug'
