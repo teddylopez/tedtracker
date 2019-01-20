@@ -39,13 +39,6 @@ ActiveRecord::Schema.define(version: 2019_01_20_181446) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "personnels", force: :cascade do |t|
-    t.integer "personnel_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", id: :serial, force: :cascade do |t|
     t.date "date"
     t.text "description"
