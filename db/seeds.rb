@@ -33,6 +33,8 @@ puts "10 employees created"
     phone: '2402717135',
     ssn: 1234,
     company: "Advisory Board"
+  )
+
 end
 
 puts "3 admins created"
