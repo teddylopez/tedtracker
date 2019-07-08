@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe AuditLog, type: :model do
 
   before do
-    @audit_log = FactoryGirl.create(:audit_log)
+    @audit_log = FactoryBot.create(:audit_log)
   end
 
   describe 'creation' do

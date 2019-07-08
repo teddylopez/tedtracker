@@ -4,7 +4,7 @@ RSpec.describe Post, type: :model do
   describe "creation" do
 
     before do
-      @post = FactoryGirl.create(:post)
+      @post = FactoryBot.create(:post)
     end
 
     it "can be created" do

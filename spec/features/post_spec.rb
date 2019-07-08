@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'navigate' do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:user) { FactoryBot.create(:user) }
   let(:post) do
     Post.create(date: Date.today, description: "Description", user_id: user.id, daily_hours: 3.5)
   end
@@ -26,7 +26,7 @@ describe 'navigate' do
 
     it 'has a list of posts' do
       post
-      second_post = FactoryGirl.create(:second_post)
+      second_post = FactoryBot.create(:second_post)
       second_post.update!(user_id: user.id)
 
       visit posts_path
@@ -61,7 +61,7 @@ describe 'navigate' do
     it 'can be deleted' do
       logout(:user)
 
-      delete_user = FactoryGirl.create(:user)
+      delete_user = FactoryBot.create(:user)
       login_as(delete_user, :scope => :user)
 
       post_to_delete = Post.create(date: Date.today, description: "Description", user_id: delete_user.id, daily_hours: 3.5)
@@ -118,7 +118,7 @@ describe 'navigate' do
 
     it 'cannot be edited by a non authorized user' do
       logout(:user)
-      non_authorized_user = FactoryGirl.create(:non_authorized_user)
+      non_authorized_user = FactoryBot.create(:non_authorized_user)
       login_as(non_authorized_user, :scope => :user)
 
       visit edit_post_path(post)

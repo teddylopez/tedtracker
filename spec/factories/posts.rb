@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :post do
     date Date.today
     description "Post 1"
