@@ -17,12 +17,16 @@ class UserDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime.with_options(searchable: false),
     updated_at: Field::DateTime.with_options(searchable: false),
     type: Field::String.with_options(searchable: false),
+    ssn: Field::Number.with_options(searchable: true),
+    company: Field::String.with_options(searchable: true)
   }.freeze
 
   COLLECTION_ATTRIBUTES = [
     :posts,
     :email,
-    :type
+    :type,
+    :ssn,
+    :company
   ].freeze
 
   SHOW_PAGE_ATTRIBUTES = [
@@ -38,7 +42,7 @@ class UserDashboard < Administrate::BaseDashboard
     :last_name,
     :created_at,
     :updated_at,
-    :type,
+    :type
   ].freeze
 
   FORM_ATTRIBUTES = [
@@ -47,5 +51,7 @@ class UserDashboard < Administrate::BaseDashboard
     :password,
     :first_name,
     :last_name,
+    :ssn,
+    :company
   ].freeze
 end
