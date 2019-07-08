@@ -19,12 +19,6 @@ end
 
 puts "10 employees created"
 
-@test_user = 1.times do |test_user|
-  FactoryGirl.create(:user)
-end
-
-puts "1 test user"
-
 3.times do |admin|
   FactoryGirl.create(:admin_user)
 end
