@@ -1,6 +1,6 @@
 require 'faker'
 
-FactoryBot.define do
+FactoryGirl.define do
 	sequence :email do |n|
     "test#{n}@test.com"
   end
@@ -23,7 +23,7 @@ FactoryBot.define do
     password "password"
     password_confirmation "password"
 		phone '2402717135'
-		ssn 1234
+		ssn 1235
 		company "Advisory Board"
   end
 
@@ -34,7 +34,7 @@ FactoryBot.define do
 		password "password"
 		password_confirmation "password"
 		phone '2402717135'
-		ssn 1234
+		ssn 1236
 		company "Advisory Board"
 	end
 
@@ -45,7 +45,7 @@ FactoryBot.define do
 		password "password"
 		password_confirmation "password"
 		phone '2402717135'
-		ssn 1234
+		ssn 1237
 		company "Advisory Board"
 	end
 

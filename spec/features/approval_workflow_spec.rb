@@ -2,13 +2,13 @@ require 'rails_helper'
 
 describe 'navigate' do
   before do
-    @admin = FactoryBot.create(:admin_user)
+    @admin = FactoryGirl.create(:admin_user)
     login_as(@admin, :scope => :user)
   end
 
   describe 'edit' do
     before do
-      @post = FactoryBot.create(:post)
+      @post = FactoryGirl.create(:post)
       visit edit_post_path(@post)
     end
 
@@ -20,7 +20,7 @@ describe 'navigate' do
 
     it 'cannot be edited by a non admin' do
       logout(:user)
-      user = FactoryBot.create(:user)
+      user = FactoryGirl.create(:user)
       login_as(user, :scope => :user)
       visit edit_post_path(@post)
       expect(page).to_not have_content('Approved')
@@ -28,7 +28,7 @@ describe 'navigate' do
 
     it 'should not be editable by post creator if status is approved' do
       logout(:user)
-      user = FactoryBot.create(:user)
+      user = FactoryGirl.create(:user)
       login_as(user, :scope => :user)
 
       @post.update(user_id: user.id, status: 'approved')

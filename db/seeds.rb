@@ -2,24 +2,24 @@ require 'faker'
 
 @employees = Array.new
 18.times do |employee|
-  @employees << FactoryBot.create(:user)
+  @employees << FactoryGirl.create(:user)
 end
 
 puts "18 employees created"
 
 @test_user = 1.times do |test_user|
-  FactoryBot.create(:user)
+  FactoryGirl.create(:user)
 end
 
 puts "1 test user"
 
 3.times do |admin|
-  FactoryBot.create(:admin_user)
+  FactoryGirl.create(:admin_user)
 end
 
 puts "3 admins created"
 
-@ted = FactoryBot.create(:ted)
+@ted = FactoryGirl.create(:ted)
 
 puts "1 Ted created"
 

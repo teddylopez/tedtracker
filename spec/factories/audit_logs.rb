@@ -1,4 +1,4 @@
-FactoryBot.define do
+FactoryGirl.define do
   factory :audit_log do
     user
     status 0
