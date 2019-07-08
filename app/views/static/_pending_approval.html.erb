@@ -1,24 +1,26 @@
 <% pending_approvals.each do |pending_approval| %>
-	<div class='homepage-block col-md-3'>
-		<h4>
-			<%= pending_approval.user.full_name %>
-		</h4>
+	<%= link_to pending_approval do %>
+		<div class='homepage-block col-md-3'>
+			<h4>
+				<%= pending_approval.user.full_name %>
+			</h4>
 
-		<p>
-			<span class='pending-details'>Date Submitted:</span> <%= pending_approval.date %>
-		</p>
+			<p>
+				<span class='pending-details'>Date Submitted:</span> <%= pending_approval.date %>
+			</p>
 
-		<p>
-			<span class='pending-details'>Description:</span> <%= truncate pending_approval.description, length: 42 %>
-		</p>
+			<p>
+				<span class='pending-details'>Description:</span> <%= truncate pending_approval.description, length: 42 %>
+			</p>
 
-		<div class='row'>
-			<div class='col-md-6 column'>
-				<%= link_to 'Approve', approve_post_path(pending_approval), class: 'btn btn-success btn-block', id: "approve_#{pending_approval.id}" %>
-			</div>
-			<div class='col-md-6 column'>
-				<%= link_to 'Review', edit_post_path(pending_approval), class: 'btn btn-warning btn-block' %>
+			<div class='row'>
+				<div class='col-md-6 column'>
+					<%= link_to 'Approve', approve_post_path(pending_approval), class: 'btn btn-success btn-block', id: "approve_#{pending_approval.id}" %>
+				</div>
+				<div class='col-md-6 column'>
+					<%= link_to 'Review', edit_post_path(pending_approval), class: 'btn btn-warning btn-block' %>
+				</div>
 			</div>
 		</div>
-	</div>
+	<% end %>
 <% end %>
