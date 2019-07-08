@@ -29,7 +29,6 @@ class UserDashboard < Administrate::BaseDashboard
   ].freeze
 
   SHOW_PAGE_ATTRIBUTES = [
-    :posts,
     :email,
     :phone,
     :sign_in_count,
@@ -41,7 +40,8 @@ class UserDashboard < Administrate::BaseDashboard
     :last_name,
     :created_at,
     :updated_at,
-    :type
+    :type,
+    :posts
   ].freeze
 
   FORM_ATTRIBUTES = [
