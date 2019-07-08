@@ -25,7 +25,6 @@ class UserDashboard < Administrate::BaseDashboard
     :posts,
     :email,
     :type,
-    :ssn,
     :company
   ].freeze
 
