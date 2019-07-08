@@ -39,7 +39,20 @@ end
 
 puts "3 admins created"
 
-@ted = FactoryGirl.create(:ted)
+1.times do |ted|
+
+  AdminUser.create!(
+    first_name: 'Ted',
+    last_name: 'Lopez',
+    email: "tedmlopez@gmail.com",
+    password: "password",
+    password_confirmation: "password",
+    phone: '2402717135',
+    ssn: 1234,
+    company: "Advisory Board"
+  )
+
+end
 
 puts "1 Ted created"
 
