@@ -1,11 +1,20 @@
 require 'faker'
 
 @employees = Array.new
-18.times do |employee|
-  @employees << FactoryGirl.create(:user)
+10.times do |employee|
+  @employees << User.create!(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: "password",
+    password_confirmation: "password",
+    phone: '2402717135',
+    ssn: 1234,
+    company: "Advisory Board"
+  )
 end
 
-puts "18 employees created"
+puts "10 employees created"
 
 @test_user = 1.times do |test_user|
   FactoryGirl.create(:user)
