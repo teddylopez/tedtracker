@@ -2,10 +2,13 @@ require 'faker'
 
 @employees = Array.new
 10.times do |employee|
+  @first_name = Faker::Name.first_name
+  @last_name = Faker::Name.last_name
+
   @employees << User.create!(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.email,
+    first_name: @first_name,
+    last_name: @last_name,
+    email: "#{@first_name}.#{@last_name}@abc.com",
     password: "password",
     password_confirmation: "password",
     phone: '2402717135',
