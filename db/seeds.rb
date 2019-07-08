@@ -1,6 +1,7 @@
 require 'faker'
 
 @employees = Array.new
+
 10.times do |employee|
   @first_name = Faker::Name.first_name
   @last_name = Faker::Name.last_name
@@ -20,7 +21,18 @@ end
 puts "10 employees created"
 
 3.times do |admin|
-  FactoryGirl.create(:admin_user)
+  @first_name = Faker::Name.first_name
+  @last_name = Faker::Name.last_name
+
+  AdminUser.create!(
+    first_name: @first_name,
+    last_name: @last_name,
+    email: "#{@first_name}.#{@last_name}@abc.com",
+    password: "password",
+    password_confirmation: "password",
+    phone: '2402717135',
+    ssn: 1234,
+    company: "Advisory Board"
 end
 
 puts "3 admins created"
