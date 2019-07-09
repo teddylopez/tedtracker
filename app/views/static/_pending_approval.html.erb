@@ -9,16 +9,14 @@
 				<span class='pending-details'>Date Submitted:</span> <%= pending_approval.date %>
 			</p>
 
-			<p>
-				<span class='pending-details'>Description:</span> <%= truncate pending_approval.description, length: 42 %>
-			</p>
-
 			<div class='row'>
-				<div class='col-md-6 column'>
-					<%= link_to 'Approve', approve_post_path(pending_approval), class: 'btn btn-success btn-block', id: "approve_#{pending_approval.id}" %>
-				</div>
-				<div class='col-md-6 column'>
-					<%= link_to 'Review', edit_post_path(pending_approval), class: 'btn btn-warning btn-block' %>
+				<div class='button-actions'>
+					<%= link_to approve_post_path(pending_approval), id: "approve_#{pending_approval.id}", :data => {:confirm => "Are you sure you'd like to approve this submission?"} do %>
+						<img src="https://img.icons8.com/nolan/64/000000/in-progress.png">
+					<% end %>
+					<%= link_to edit_post_path(pending_approval) do %>
+						<img src="https://img.icons8.com/nolan/64/000000/more.png">
+					<% end %>
 				</div>
 			</div>
 		</div>

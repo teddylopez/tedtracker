@@ -19,6 +19,8 @@
  @import "posts.scss";
  @import "gritter";
  @import "bourbon";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
 .custom-nav {
  	margin-top: 15px;
@@ -32,5 +34,11 @@
   a {
     color: white;
     text-decoration: none;
+  }
+}
+
+.button-actions {
+  a {
+    margin-left: 10%;
   }
 }

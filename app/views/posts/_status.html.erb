@@ -1,10 +1,10 @@
 <div class="form-group">
   <%= f.radio_button :status, 'submitted' %>
-  <%= f.label :status, 'Submitted' %>
-
+  <%= f.label :status, 'Submitted', :value => "submitted" %>
+  <br>
   <%= f.radio_button :status, 'approved' %>
-  <%= f.label :status, 'Approved' %>
-
+  <%= f.label :status, 'Approved', :value => "approved" %>
+  <br>
   <%= f.radio_button :status, 'rejected' %>
-  <%= f.label :status, 'Rejected' %>
+  <%= f.label :status, 'Rejected', :value => "rejected" %>
 </div>

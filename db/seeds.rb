@@ -2,7 +2,7 @@ require 'faker'
 
 @employees = Array.new
 
-10.times do |employee|
+32.times do |employee|
   @first_name = Faker::Name.first_name
   @last_name = Faker::Name.last_name
 
@@ -18,7 +18,7 @@ require 'faker'
   )
 end
 
-puts "10 employees created"
+puts "32 employees created"
 
 3.times do |admin|
   @first_name = Faker::Name.first_name
@@ -62,7 +62,7 @@ AuditLog.create!(user_id: @employees.sample.id, status: 0, start_date: (Date.tod
 
 puts "3 audit logs created"
 
-13.times do |post|
+17.times do |post|
   Post.create!(
     date: Faker::Date.between(1.year.ago, Date.today),
     description: Faker::Seinfeld.quote,
@@ -71,4 +71,4 @@ puts "3 audit logs created"
   )
 end
 
-puts "13 posts created"
+puts "17 posts created"
