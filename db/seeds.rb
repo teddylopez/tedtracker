@@ -62,13 +62,13 @@ AuditLog.create!(user_id: @employees.sample.id, status: 0, start_date: (Date.tod
 
 puts "3 audit logs created"
 
-17.times do |post|
-  Post.create!(
-    date: Faker::Date.between(1.year.ago, Date.today),
-    description: Faker::Seinfeld.quote,
-    user_id: @employees.sample.id,
-    daily_hours: rand(0.0..100.0).round(2)
-  )
-end
+# 17.times do |post|
+#   Post.create!(
+#     date: Faker::Date.between(1.year.ago, Date.today),
+#     description: Faker::Seinfeld.quote,
+#     user_id: @employees.sample.id,
+#     daily_hours: rand(0.0..100.0).round(2)
+#   )
+# end
 
 puts "17 posts created"
