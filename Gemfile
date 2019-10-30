@@ -14,7 +14,7 @@ gem 'bootsnap'
 
 # Custom gems:
 gem 'dotenv-rails', :groups => [:development, :test], require: 'dotenv/rails-now'
-gem 'devise', '~> 4.5'
+gem 'devise', '~> 4.7'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem "gritter", "1.2.0"
 gem 'administrate', '~> 0.11.0'
