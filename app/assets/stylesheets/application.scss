@@ -14,20 +14,29 @@
  *= require_self
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "posts.scss";
- @import "gritter";
- @import "bourbon";
- @import "font-awesome-sprockets";
- @import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "posts.scss";
+@import "gritter";
+@import "bourbon";
 
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.logo {
+  font-family: "Bangers", cursive;
+  font-size: 50px;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+}
 .custom-nav {
- 	margin-top: 15px;
+  margin-top: 15px;
 }
 
 .btn-employee-home {
-	white-space:normal !important;
+  white-space: normal !important;
 }
 
 .homepage-block {
@@ -41,4 +50,8 @@
   a {
     margin-left: 10%;
   }
+}
+
+.row {
+  margin-right: 0;
 }
