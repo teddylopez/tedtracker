@@ -17,7 +17,7 @@ gem 'dotenv-rails', :groups => [:development, :test], require: 'dotenv/rails-now
 gem 'devise', '~> 4.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem "gritter", "1.2.0"
-gem 'administrate', '~> 0.11.0'
+gem 'administrate', '~> 0.13.0'
 gem 'bourbon'
 gem 'pundit', '~> 1.1'
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
