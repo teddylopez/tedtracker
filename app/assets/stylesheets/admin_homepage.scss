@@ -19,6 +19,12 @@
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  transition: all ease-in-out 0.25s;
+}
+
+.pending > .homepage-block:hover {
+  background-color: #172b63;
+  transform: scale(1.03);
 }
 
 .pending-details {

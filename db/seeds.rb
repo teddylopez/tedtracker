@@ -14,7 +14,8 @@ require 'faker'
     password_confirmation: "password",
     phone: '2402717135',
     ssn: 1234,
-    company: "Advisory Board"
+    company: "Advisory Board",
+    type: "Employee"
   )
 end
 
@@ -30,7 +31,8 @@ end
     password_confirmation: "password",
     phone: '2402717135',
     ssn: 1234,
-    company: "Advisory Board"
+    company: "Advisory Board",
+    type: "Employee"
   )
 end
 
@@ -83,7 +85,7 @@ puts "3 audit logs created"
     date: Faker::Date.between(1.year.ago, Date.today),
     description: Faker::TvShows::Seinfeld.quote,
     user_id: @employees.sample.id,
-    daily_hours: rand(0.0..100.0).round(2)
+    daily_hours: rand(0.0..16.0).round(2)
   )
 end
 

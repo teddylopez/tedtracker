@@ -43,4 +43,9 @@ class UserDashboard < Administrate::BaseDashboard
     :ssn,
     :company
   ].freeze
+
+  def display_resource(user)
+    "#{user.email}"
+  end
+
 end

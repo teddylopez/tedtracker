@@ -6,11 +6,15 @@
 			</h4>
 
 			<p>
+				<span class='pending-details'>Hours:</span> <%= pending_approval.daily_hours %>
+			</p>
+
+			<p>
 				<span class='pending-details'>Submitted:</span> <%= pending_approval.date %>
 			</p>
 
 			<div class='button-actions'>
-				<%= link_to 'Approve', approve_post_path(pending_approval), class: 'btn btn-success btn-block', id: "approve_#{pending_approval.id}" %>
+				<%= link_to 'Approve', approve_post_path(pending_approval), class: 'btn btn-success btn-block', id: "approve_#{pending_approval.id}", data: {confirm: "Are you sure?"} %>
 				<%= link_to 'Review', edit_post_path(pending_approval), class: 'btn btn-warning btn-block' %>
 			</div>
 		</div>
