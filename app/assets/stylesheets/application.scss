@@ -40,6 +40,7 @@ body {
 }
 
 .homepage-block {
+  width: 25%;
   a {
     color: white;
     text-decoration: none;
@@ -47,11 +48,17 @@ body {
 }
 
 .button-actions {
-  a {
-    margin-left: 10%;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
-.row {
-  margin-right: 0;
+.container {
+  margin: 20px auto;
+}
+
+@media (max-width: 900px) {
+  .homepage-block {
+    margin: 10px 0;
+    width: 100%;
+  }
 }
